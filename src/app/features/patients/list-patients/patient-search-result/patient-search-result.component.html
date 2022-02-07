@@ -1,0 +1,7 @@
+<div class="searchResult">
+  <div *ngFor="let patient of searchResult; trackBy:trackByFunction">
+    <div>{{patient.id}}</div>
+    <div>{{patient.name}}</div>
+    <div>{{patient.age}}</div>
+  </div>
+</div>

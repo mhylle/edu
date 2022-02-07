@@ -1,0 +1,11 @@
+<div class="searchCriteria">
+  <div>
+    <input type="text" placeholder="name" class="search" [(ngModel)]="name">
+  </div>
+  <div>
+    <button (click)="search()">Search</button>
+  </div>
+</div>
+<div *ngIf="searchResult$|async as searchResult">
+  <app-patient-search-result [searchResult]="searchResult"></app-patient-search-result>
+</div>

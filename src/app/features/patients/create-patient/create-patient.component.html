@@ -1,0 +1,13 @@
+<div>
+  <div class="name" *ngIf="patient">
+    <input type="text" placeholder="Name" [(ngModel)]="patient.name" />
+  </div>
+  <div>{{patient|json}}</div>
+  <div><button (click)="createPatient()">Create</button> </div>
+
+  <div *ngIf="createdPatient$|async as patient">
+    <div>{{patient.id}}</div>
+    <div>{{patient.name}}</div>
+    <div>{{patient.age}}</div>
+  </div>
+</div>
